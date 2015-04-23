@@ -8,13 +8,13 @@
 #include <stdio.h>
 #include <pthread.h>
 
-int thread_args[3] = { 0, 1, 2 };  /* 쓰레드가 사용할 인자 */
+int thread_args[4] = { 0, 1, 2,3 };  /* 쓰레드가 사용할 인자 */
 //-------------------------------------------------------------
 /* 쓰레드로 수행할 함수 */
 void* Thread( void *arg )
 {
     int i;
-    for ( i=0; i<3; i++ )
+    for ( i=0; i<30; i++ )
         printf( "thread %d: %dth iteration\n", *(int*)arg, i );
     pthread_exit(0);  /* 쓰레드 종료 함수 */
 }
@@ -22,9 +22,9 @@ void* Thread( void *arg )
 int main( void )
 {
     int i, clock_get;
-    pthread_t threads[3]; /* 쓰레드 아이디를 위한 변수 */
+    pthread_t threads[4]; /* 쓰레드 아이디를 위한 변수 */
     
-    for ( i=0; i<3; i++ )  /* 쓰레드 생성 */
+    for ( i=0; i<4; i++ )  /* 쓰레드 생성 */
         // TODO: 스레드 생성하기
         pthread_create( &threads[i],                /* 쓰레드ID */
                         NULL,                       /* 쓰레드 속성 */
