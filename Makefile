@@ -3,8 +3,8 @@
 TOPDIR := $(shell if [ "$$PWD" != "" ]; then echo $$PWD; else pwd; fi)
 
 TARGET = pthread_test
-OBJS = pthread_test.o
-LIBS = -lpthread
+OBJS = pthread_test1.o
+LIBS = -lpthread -lm
 
 INCLUDEDIR = 
 LIBDIR = 
