@@ -4,7 +4,7 @@
  * Desc: 쓰레드 생성 제거 예제
  * Revision History
  * 
- ***************************************/
+hotfix ***************************************/
 #include <stdio.h>
 #include <pthread.h>
 
