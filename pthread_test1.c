@@ -13,8 +13,9 @@ int thread_args[4] = { 0, 1, 2,3 };  /* 쓰레드가 사용할 인자 */
 /* 쓰레드로 수행할 함수 */
 void* Thread( void *arg )
 {
-    int i,master;
-    for ( i=0; i<30; i++ )
+    int i,master,iss53;
+	int test; 
+   for ( i=0; i<30; i++ )
         printf( "thread %d: %dth iteration\n", *(int*)arg, i );
     pthread_exit(0);  /* 쓰레드 종료 함수 */
 }
